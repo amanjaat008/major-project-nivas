@@ -91,7 +91,7 @@ app.get("/", (req, res) => {
 });
 
 // 404 Handler (Ise routes ke BAAD rakhein)
-app.all("*", (req, res, next) => {
+app.all("/*", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
 
